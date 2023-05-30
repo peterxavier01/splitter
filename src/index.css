@@ -1,0 +1,149 @@
+:root {
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 33%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --light-cyan: hsl(172, 67%, 50%);
+  --very-light-cyan: hsl(172, 67%, 70%);
+  --lighter-gray: hsl(0, 0%, 73%);
+  --white: hsl(0, 0%, 100%);
+  --red: rgb(243, 78, 78);
+  --border-radius-sm: 4px;
+  --border-radius-md: 15px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--grayish-cyan);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--very-dark-cyan);
+  border-radius: var(--border-radius-md);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grayish-cyan);
+  padding: 2em 0 0 0;
+  font-family: "Space Mono", monospace;
+}
+
+.app header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-transform: uppercase;
+  gap: 0.2em;
+  letter-spacing: 5px;
+  margin-bottom: 1em;
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+}
+
+.app .wrapper {
+  background-color: var(--white);
+  padding: 2em;
+  border-radius: var(--border-radius-md);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  gap: 2em;
+}
+
+.app .column-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+}
+
+.app .column-right {
+  width: 100%;
+}
+
+.label {
+  font-weight: 700;
+  color: var(--dark-grayish-cyan);
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  width: fit-content;
+  user-select: none;
+}
+
+.input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0.5em 1em;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .app .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    border-bottom-left-radius: var(--border-radius-md);
+    border-bottom-right-radius: var(--border-radius-md);
+  }
+
+  .app {
+    padding: 1em;
+  }
+}
+
+/******************************** Custom Input Styles ********************************/
+.input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0.5em 1em;
+  width: 100%;
+}
+
+.custom-input ::placeholder {
+  text-align: right;
+}
+
+.custom-input {
+  position: relative;
+  background-color: var(--very-light-grayish-cyan);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5em;
+  border-radius: var(--border-radius-sm);
+  margin-top: 0.5em;
+  border: 2px solid transparent;
+}
+
+.input:focus .custom-input {
+  border: 2px solid var(--very-light-cyan);
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-input span {
+  font-weight: 700;
+  color: var(--grayish-cyan);
+  position: absolute;
+}
+
+.custom-input input {
+  text-align: right;
+  font-weight: 700;
+  color: var(--dark-grayish-cyan);
+  font-size: 1.2rem;
+}

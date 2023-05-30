@@ -1,0 +1,55 @@
+.tip-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1em;
+  margin-top: 0.5em;
+  user-select: none;
+}
+
+.tip-wrapper span,
+.tip-wrapper input {
+  border-radius: var(--border-radius-sm);
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+.tip-wrapper span {
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.tip-wrapper span:hover {
+  background-color: var(--very-light-cyan);
+  color: var(--dark-grayish-cyan);
+  transition: all 0.2s ease-in-out;
+}
+
+.tip-wrapper input {
+  background-color: var(--very-light-grayish-cyan);
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--dark-grayish-cyan);
+}
+
+.tip-wrapper input:hover {
+  border: 2px solid var(--light-cyan);
+}
+
+.tip-wrapper input:focus {
+  border: 2px solid var(--light-cyan);
+}
+
+.tip-wrapper ::placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--grayish-cyan);
+}
+
+.tip-box.selected {
+  background-color: var(--light-cyan);
+  color: var(--dark-grayish-cyan);
+}
