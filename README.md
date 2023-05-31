@@ -30,7 +30,6 @@ Users should be able to:
 
 ![](./src/assets/screenshot-1.png)
 ![](./src/assets/screenshot-2.png)
-![](./src/assets/screenshot-3.png)
 
 ### Links
 
