@@ -1,4 +1,3 @@
-import "../styles/people.css";
 import { MdPerson } from "react-icons/md";
 import { Types } from "../context/BillReducer";
 import { useBillContext } from "../context/BillContext";
